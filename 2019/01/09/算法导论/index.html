@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="###渐进符号    O：&amp;lt;=, n^2+O(n)=O(n^3)    Ω：&amp;gt;=, √n=Ω(lgn)    ω: &amp;gt; ,    o: &amp;lt; , 2n^2=o(n^3)    Θ: = : n^2=Θ(n^2) ###递归复杂度    1.代换法（数学归纳法）    2.递归树    3.主方法（有限制）：递归方程形如 T(n)=aT(n/b)+f(n) a&amp;gt;=1,b&amp;">
+<meta name="description" content="渐进符号O：&amp;lt;=, n^2+O(n)=O(n^3) Ω：&amp;gt;=, √n=Ω(lgn) ω: &amp;gt; ,  o: &amp;lt; , 2n^2=o(n^3) Θ: = : n^2=Θ(n^2)  递归复杂度 代换法（数学归纳法） 递归树 主方法（有限制）：递归方程形如 T(n)=aT(n/b)+f(n) a&amp;gt;=1,b&amp;gt;1 f(n)=O(n^(logba-ε))   T(n)=Θ(n">
 <meta name="keywords" content="Data Structure And Algorithms">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法导论">
 <meta property="og:url" content="http://yoursite.com/2019/01/09/算法导论/index.html">
 <meta property="og:site_name" content="等风也等你">
-<meta property="og:description" content="###渐进符号    O：&amp;lt;=, n^2+O(n)=O(n^3)    Ω：&amp;gt;=, √n=Ω(lgn)    ω: &amp;gt; ,    o: &amp;lt; , 2n^2=o(n^3)    Θ: = : n^2=Θ(n^2) ###递归复杂度    1.代换法（数学归纳法）    2.递归树    3.主方法（有限制）：递归方程形如 T(n)=aT(n/b)+f(n) a&amp;gt;=1,b&amp;">
+<meta property="og:description" content="渐进符号O：&amp;lt;=, n^2+O(n)=O(n^3) Ω：&amp;gt;=, √n=Ω(lgn) ω: &amp;gt; ,  o: &amp;lt; , 2n^2=o(n^3) Θ: = : n^2=Θ(n^2)  递归复杂度 代换法（数学归纳法） 递归树 主方法（有限制）：递归方程形如 T(n)=aT(n/b)+f(n) a&amp;gt;=1,b&amp;gt;1 f(n)=O(n^(logba-ε))   T(n)=Θ(n">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-09T06:40:59.000Z">
+<meta property="og:updated_time" content="2019-01-11T06:43:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法导论">
-<meta name="twitter:description" content="###渐进符号    O：&amp;lt;=, n^2+O(n)=O(n^3)    Ω：&amp;gt;=, √n=Ω(lgn)    ω: &amp;gt; ,    o: &amp;lt; , 2n^2=o(n^3)    Θ: = : n^2=Θ(n^2) ###递归复杂度    1.代换法（数学归纳法）    2.递归树    3.主方法（有限制）：递归方程形如 T(n)=aT(n/b)+f(n) a&amp;gt;=1,b&amp;">
+<meta name="twitter:description" content="渐进符号O：&amp;lt;=, n^2+O(n)=O(n^3) Ω：&amp;gt;=, √n=Ω(lgn) ω: &amp;gt; ,  o: &amp;lt; , 2n^2=o(n^3) Θ: = : n^2=Θ(n^2)  递归复杂度 代换法（数学归纳法） 递归树 主方法（有限制）：递归方程形如 T(n)=aT(n/b)+f(n) a&amp;gt;=1,b&amp;gt;1 f(n)=O(n^(logba-ε))   T(n)=Θ(n">
 
 
 
@@ -376,10 +376,88 @@
       
 
       
-        <p>###渐进符号<br>    O：&lt;=, n^2+O(n)=O(n^3)<br>    Ω：&gt;=, √n=Ω(lgn)<br>    ω: &gt; ,<br>    o: &lt; , 2n^2=o(n^3)<br>    Θ: = : n^2=Θ(n^2)</p>
-<p>###递归复杂度<br>    1.代换法（数学归纳法）<br>    2.递归树<br>    3.主方法（有限制）：递归方程形如 T(n)=aT(n/b)+f(n) a&gt;=1,b&gt;1<br>    1.f(n)=O(n^(logba-ε))   T(n)=Θ(n^logba)<br>    2.f(n)=Θ(n^logba<em>(lgn)^k)   T(n)=Θ(n^logba</em>(lgn)^(k+1))<br>    3.f(n)=Ω(n^(logba+ε)) &amp;&amp; af(n/b)&lt;=(1-ε’)f(n)   T(n)=Θ(f(n))<br>    (0&lt;ε&lt;logba,,0&lt;ε’&lt;1,k&gt;=0 常数)</p>
-<p>###分治法<br>    1.归并排序<br>    2.二分查找<br>    3.乘方定理<br>     (1)普通相乘 T(n)=Θ(n)<br>     (2)分而治之<br>        -n=even,x^n=x^(n/2)<em>x^(n/2)<br>        -n=odd,x^n=x^(n-1/2)</em>x^(n-1/2)<em>x<br>        -T(n)=Θ(lgn)<br>    4.斐波那契数列<br>     (1)普通递归 T(n)=Θ(φ^n) φ为黄金分割比<br>     (2)从F1到Fn  T(n)=Θ(n)<br>     (3)Fn=φ^n/√5  T(n)=Θ(lgn)  (会发生精度丢失)<br>     (4)2×2矩阵((Fn+1),Fn),(Fn,Fn-1))=((1,1),(1,0))^n   T(n)=Θ(lgn)<br>     (3)(4)运用乘方定理<br>    5.矩阵乘法（C=A×B）<br>     (1)普通运算 T(n)=Θ(n^3)<br>     (2)n×n矩阵转化成 4个 n/2×n/2 矩阵<br>           T(n)=8T(n/2)+Θ(n^2)==&gt;T(n)=Θ(n^3)<br>     (3)Strassen’s Algorithm<br>           T(n)=7T(n/2)+Θ(n^2)==&gt;T(n)=Θ(n^2.81)<br>    6.VLSI<br>     (1)二叉树画法<br>        H(n)=H(n/2)+Θ(1)==&gt;H(n)=Θ(lgn)<br>        W(n)=2W(n/2)+Θ(1)==&gt;W(n)=Θ(n)<br>        T(n)=H(n)</em>W(n)=Θ(nlgn)<br>     (2)H型画法<br>        H(n)=2H(n/4)+Θ(1)==&gt;H(n)=Θ(√n)<br>        W(n)=2W(n/4)+Θ(1)==&gt;W(n)=Θ(√n)<br>        T(n)=H(n)*W(n)=Θ(n)<br>    —-分治法也是一种递归，可通过递归复杂度的计算方法构造不同的分治思路</p>
-<p>###排序<br>    1.基于比较排序模型（决策树）<br>        1.冒泡排序 O(n^2) 稳定  O(1)<br>        2.插入排序 O(n^2) 稳定  O(1)<br>        3.选择排序 O(n^2) 不稳定  O(1)<br>        4.快速排序 O(nlgn) 不稳定  O(lgn)<br>           -最坏O(n^2)<br>           -平均O(nlgn) &lt;– 随机化算法<br>        5.希尔排序 O(nlgn) 不稳定  O(1)<br>        6.堆排序 O(nlgn) 不稳定  O(1)<br>        7.归并排序 O(nlgn) 稳定  O(n)<br>    2.非比较排序模型<br>        1.计数排序 O(n+k) 稳定  O(k)<br>           -k为n个待排序数字的最大值，当k不是很大时适用<br>        2.桶排序<br>        3.基数排序 O(d(n+r)) 稳定  O(n+2*r)<br>           -d为最大位数，r为每一位位数的最大值</p>
+        <h2 id="渐进符号"><a href="#渐进符号" class="headerlink" title="渐进符号"></a>渐进符号</h2><pre><code>O：&lt;=, n^2+O(n)=O(n^3)
+Ω：&gt;=, √n=Ω(lgn)
+ω: &gt; , 
+o: &lt; , 2n^2=o(n^3)
+Θ: = : n^2=Θ(n^2)
+</code></pre><hr>
+<h2 id="递归复杂度"><a href="#递归复杂度" class="headerlink" title="递归复杂度"></a>递归复杂度</h2><ol>
+<li>代换法（数学归纳法）</li>
+<li>递归树</li>
+<li>主方法（有限制）：递归方程形如 T(n)=aT(n/b)+f(n) a&gt;=1,b&gt;1<ul>
+<li>f(n)=O(n^(logba-ε))   T(n)=Θ(n^logba)</li>
+<li>f(n)=Θ(n^logba*(lgn)^k)   T(n)=Θ(n^logba*(lgn)^(k+1))</li>
+<li>f(n)=Ω(n^(logba+ε)) &amp;&amp; af(n/b)&lt;=(1-ε’)f(n)   T(n)=Θ(f(n))<br><strong>(0&lt;ε&lt;logba,,0&lt;ε’&lt;1,k&gt;=0 常数)</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="分治法"><a href="#分治法" class="headerlink" title="分治法"></a>分治法</h2><ol>
+<li>归并排序</li>
+<li>二分查找</li>
+<li>乘方定理<ol>
+<li>普通相乘 T(n)=Θ(n)</li>
+<li>分而治之<ul>
+<li>n=even,x^n=x^(n/2)*x^(n/2)</li>
+<li>n=odd,x^n=x^(n-1/2)*x^(n-1/2)*x</li>
+<li>T(n)=Θ(lgn)</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>斐波那契数列<ol>
+<li>普通递归 T(n)=Θ(φ^n) φ为黄金分割比</li>
+<li>从F1到Fn  T(n)=Θ(n) </li>
+<li>Fn=φ^n/√5  T(n)=Θ(lgn)  (会发生精度丢失)</li>
+<li>2×2矩阵((Fn+1),Fn),(Fn,Fn-1))=((1,1),(1,0))^n   T(n)=Θ(lgn)<br><strong>3,4运用乘方定理</strong></li>
+</ol>
+</li>
+<li>矩阵乘法（C=A×B）<ol>
+<li>普通运算 T(n)=Θ(n^3)</li>
+<li>n×n矩阵转化成 4个 n/2×n/2 矩阵<br><strong>T(n)=8T(n/2)+Θ(n^2)==&gt;T(n)=Θ(n^3)</strong></li>
+<li>Strassen’s Algorithm<br><strong>T(n)=7T(n/2)+Θ(n^2)==&gt;T(n)=Θ(n^2.81)</strong></li>
+</ol>
+</li>
+<li><p>VLSI</p>
+<ol>
+<li>二叉树画法<br> H(n)=H(n/2)+Θ(1)==&gt;H(n)=Θ(lgn)<br> W(n)=2W(n/2)+Θ(1)==&gt;W(n)=Θ(n)<br> T(n)=H(n)*W(n)=Θ(nlgn)</li>
+<li><p>H型画法</p>
+<p>H(n)=2H(n/4)+Θ(1)==&gt;H(n)=Θ(√n)<br>W(n)=2W(n/4)+Θ(1)==&gt;W(n)=Θ(√n)<br>T(n)=H(n)*W(n)=Θ(n)</p>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>分治法也是一种递归，可通过递归复杂度的计算方法构造不同的分治思路
+</code></pre><hr>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ol>
+<li>基于比较排序模型（决策树）<ol>
+<li>冒泡排序 O(n^2) 稳定  O(1)</li>
+<li>插入排序 O(n^2) 稳定  O(1)</li>
+<li>选择排序 O(n^2) 不稳定  O(1)</li>
+<li>快速排序 O(nlgn) 不稳定  O(lgn)<ul>
+<li>最坏O(n^2)</li>
+<li>平均O(nlgn) &lt;– 随机化算法</li>
+</ul>
+</li>
+<li>希尔排序 O(nlgn) 不稳定  O(1)</li>
+<li>堆排序 O(nlgn) 不稳定  O(1)</li>
+<li>归并排序 O(nlgn) 稳定  O(n)</li>
+</ol>
+</li>
+<li>非比较排序模型<ol>
+<li>计数排序 O(n+k) 稳定  O(k)<ul>
+<li>k为n个待排序数字的最大值，当k不是很大时适用</li>
+</ul>
+</li>
+<li>桶排序</li>
+<li>基数排序 O(d(n+r)) 稳定  O(n+2*r)<ul>
+<li>d为最大位数，r为每一位位数的最大值</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
 
       
     </div>
@@ -410,8 +488,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/24/数据结构与算法/" rel="next" title="数据结构与算法例题">
-                <i class="fa fa-chevron-left"></i> 数据结构与算法例题
+              <a href="/2018/10/10/经典算法-1/" rel="next" title="常见算法(1)">
+                <i class="fa fa-chevron-left"></i> 常见算法(1)
               </a>
             
           </div>
@@ -470,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -490,7 +577,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -535,6 +622,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#渐进符号"><span class="nav-number">1.</span> <span class="nav-text">渐进符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归复杂度"><span class="nav-number">2.</span> <span class="nav-text">递归复杂度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分治法"><span class="nav-number">3.</span> <span class="nav-text">分治法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序"><span class="nav-number">4.</span> <span class="nav-text">排序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
